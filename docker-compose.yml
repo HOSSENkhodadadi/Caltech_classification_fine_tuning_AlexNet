@@ -1,0 +1,22 @@
+version: '3'
+services:
+  app:
+    image: caltech-classification
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000" # Example port mapping
+    volumes:
+      - .:/app
+    environment:
+      - ENV=development
+  
+  # db:
+  #   image: postgres:latest
+  #   environment:
+  #     POSTGRES_USER: user
+  #     POSTGRES_PASSWORD: password
+  #     POSTGRES_DB: mydb
+  #   ports:
+  #     - "5432:5432"

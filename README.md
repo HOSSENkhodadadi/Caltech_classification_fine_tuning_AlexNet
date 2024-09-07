@@ -1,7 +1,16 @@
 # Caltech 101 Classification
 ## Description
 This project implements a deep learning model for image classification on the Caltech 101 dataset. The model is trained using PyTorch and monitored using Weights & Biases (wandb).
-
+## Project Structure
+```bash
+Caltech_classification_fine_tuning_AlexNet/
+├── data/           # Directory containing your dataset
+├── model/          # Directory to save your trained model
+├── src/            # Your Python scripts, including the AlexNet implementation
+│   └── train.py    # Main script to perform the classification
+├── requirements.txt # Python dependencies
+└── Dockerfile      # Docker configuration file
+```
 ## Installation
 To run this project, you need to install the Weights & Biases library (wandb). You can install it via pip:<br/>
 ```bash

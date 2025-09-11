@@ -45,7 +45,7 @@ Here's an example command to start training:
 python caltech_101_kaggle_v4.py --epoch 10 --batch_size 32 --lr 0.001 --momentum 0.9 --weight_decay 0.0001 --fine_tune_mode True --fine_tune_setting "setting_1"
 ```
 This command will train the model for 10 epochs with a batch size of 32, learning rate of 0.001, momentum of 0.9, weight decay of 0.0001, using fine-tuning mode with setting "setting_1".
-
+## Results
 ## Acknowledgments
 - This project uses the Caltech 101 dataset.
 - Weights & Biases (wandb) is used for experiment tracking and visualization.

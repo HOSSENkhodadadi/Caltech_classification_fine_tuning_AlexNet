@@ -32,8 +32,6 @@ Caltech_classification_fine_tuning_AlexNet/
 └── .env.example                  # Environment vars (e.g., MODEL_PATH)
 
 ```
-
-
 ## Installation
 To run this project, you need to install the Weights & Biases library (wandb). You can install it via pip:<br/>
 ```bash

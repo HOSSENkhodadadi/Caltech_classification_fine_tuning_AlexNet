@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Data and models (managed by DVC)
+data/
+models/
+
+# Virtual environments
+env/
+venv/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Jupyter notebooks checkpoints
+notebooks/.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Docker
+__pycache__/
+*.pyc

@@ -4,34 +4,35 @@ This project implements a deep learning model for image classification on the Ca
 ## Project Structure
 ```bash
 Caltech_classification_fine_tuning_AlexNet/
-├── src/                          # Core code for serving (reused from training src/)
-│   ├── inference.py              # Model loading and prediction logic
-│   ├── preprocess.py             # Lightweight data preprocessing for inputs
-│   ├── utils.py                  # Helpers (e.g., logging, validation)
-│   └── config.py                 # Runtime configs (e.g., model path, thresholds)
-├── models/                       # Deployed model artifacts (from training, versioned)
-│   └── model_v1.pkl              # Pickled model or ONNX/TensorFlow SavedModel
-├── data/                         # Minimal—only schemas or sample inputs (no raw data)
-│   └── schemas/                  # Input/output data validation schemas (e.g., Pydantic)
-├── and tests/                        # Integration tests for serving
-│   └── test_inference.py         # Tests for API endpoints
-├── api/                          # Serving layer (e.g., REST API)
-│   └── app.py                    # FastAPI/Flask app for predictions
-├── deployment/                   # Deployment
-│   ├── Dockerfile                # Containerize the app
-│   ├── docker-compose.yml        # Local, testing with Docker
-│   ├── k8s/                      # Kubernetes manifests (e.g., deployment.yaml)
-│   └── helm/                     # Helm charts for cloud deployment
-├── monitoring/                   # Production monitoring
-│   ├── metrics.py                # Logging metrics (e.g., latency, accuracy drift)
-│   └── alerts.py                 # Alerts for model
-├── .github/workflows/            # CI/CD for deployment
-│   └── deploy.yml                # Auto-deploy on merge
-├── requirements.txt              # Dependencies (minimal, production-optimized)
-├── README.md                    , # Deployment instructions
-└── .env.example                  # Environment vars (e.g., MODEL_PATH)
+├── src/                          
+│   ├── inference.py              
+│   ├── preprocess.py             
+│   ├── utils.py                  
+│   └── config.py                 
+├── models/                       
+│   └── model_v1.pkl              
+├── data/                         
+│   └── schemas/                  
+├── and tests/                        
+│   └── test_inference.py         
+├── api/                          
+│   └── app.py                    
+├── deployment/                   
+│   ├── Dockerfile                
+│   ├── docker-compose.yml        
+│   ├── k8s/                      
+│   └── helm/                     
+├── monitoring/                   
+│   ├── metrics.py                
+│   └── alerts.py                 
+├── .github/workflows/            
+│   └── deploy.yml                
+├── requirements.txt             
+├── README.md                    , 
+└── .env.example                  
 
 ```
+
 ## Installation
 To run this project, you need to install the Weights & Biases library (wandb). You can install it via pip:<br/>
 ```bash
@@ -72,3 +73,33 @@ This command will train the model for 10 epochs with a batch size of 32, learnin
 - Weights & Biases (wandb) is used for experiment tracking and visualization.
 
 
+
+
+
+<!-- Caltech_classification_fine_tuning_AlexNet/
+├── src/                          # Core code for serving (reused from training src/)
+│   ├── inference.py              # Model loading and prediction logic
+│   ├── preprocess.py             # Lightweight data preprocessing for inputs
+│   ├── utils.py                  # Helpers (e.g., logging, validation)
+│   └── config.py                 # Runtime configs (e.g., model path, thresholds)
+├── models/                       # Deployed model artifacts (from training, versioned)
+│   └── model_v1.pkl              # Pickled model or ONNX/TensorFlow SavedModel
+├── data/                         # Minimal—only schemas or sample inputs (no raw data)
+│   └── schemas/                  # Input/output data validation schemas (e.g., Pydantic)
+├── and tests/                        # Integration tests for serving
+│   └── test_inference.py         # Tests for API endpoints
+├── api/                          # Serving layer (e.g., REST API)
+│   └── app.py                    # FastAPI/Flask app for predictions
+├── deployment/                   # Deployment
+│   ├── Dockerfile                # Containerize the app
+│   ├── docker-compose.yml        # Local, testing with Docker
+│   ├── k8s/                      # Kubernetes manifests (e.g., deployment.yaml)
+│   └── helm/                     # Helm charts for cloud deployment
+├── monitoring/                   # Production monitoring
+│   ├── metrics.py                # Logging metrics (e.g., latency, accuracy drift)
+│   └── alerts.py                 # Alerts for model
+├── .github/workflows/            # CI/CD for deployment
+│   └── deploy.yml                # Auto-deploy on merge
+├── requirements.txt              # Dependencies (minimal, production-optimized)
+├── README.md                    , # Deployment instructions
+└── .env.example                  # Environment vars (e.g., MODEL_PATH) -->

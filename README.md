@@ -4,13 +4,36 @@ This project implements a deep learning model for image classification on the Ca
 ## Project Structure
 ```bash
 Caltech_classification_fine_tuning_AlexNet/
-├── data/           # Directory containing your dataset
-├── model/          # Directory to save your trained model
-├── src/            # Your Python scripts, including the AlexNet implementation
-│   └── train.py    # Main script to perform the classification
-├── requirements.txt # Python dependencies
-└── Dockerfile      # Docker configuration file
+├── src/                          # Core code for serving (reused from training src/)
+│   ├── inference.py              # Model loading and prediction logic
+│   ├── preprocess.py             # Lightweight data preprocessing for inputs
+│   ├── utils.py                  # Helpers (e.g., logging, validation)
+│   └── config.py                 # Runtime configs (e.g., model path, thresholds)
+├── models/                       # Deployed model artifacts (from training, versioned)
+│   └── model_v1.pkl              # Pickled model or ONNX/TensorFlow SavedModel
+├── data/                         # Minimal—only schemas or sample inputs (no raw data)
+│   └── schemas/                  # Input/output data validation schemas (e.g., Pydantic)
+├── and tests/                        # Integration tests for serving
+│   └── test_inference.py         # Tests for API endpoints
+├── api/                          # Serving layer (e.g., REST API)
+│   └── app.py                    # FastAPI/Flask app for predictions
+├── deployment/                   # Deployment
+│   ├── Dockerfile                # Containerize the app
+│   ├── docker-compose.yml        # Local, testing with Docker
+│   ├── k8s/                      # Kubernetes manifests (e.g., deployment.yaml)
+│   └── helm/                     # Helm charts for cloud deployment
+├── monitoring/                   # Production monitoring
+│   ├── metrics.py                # Logging metrics (e.g., latency, accuracy drift)
+│   └── alerts.py                 # Alerts for model
+├── .github/workflows/            # CI/CD for deployment
+│   └── deploy.yml                # Auto-deploy on merge
+├── requirements.txt              # Dependencies (minimal, production-optimized)
+├── README.md                    , # Deployment instructions
+└── .env.example                  # Environment vars (e.g., MODEL_PATH)
+
 ```
+
+
 ## Installation
 To run this project, you need to install the Weights & Biases library (wandb). You can install it via pip:<br/>
 ```bash

@@ -202,11 +202,6 @@ class Caltech(VisionDataset):
       path = self.root +"/101_ObjectCategories/" + line
       label = line.split("/")[0]
       if label != "BACKGROUND_Google":
-        # if label not in self.stat_dict.keys():
-        #   self.stat_dict[label] = 1
-        # else:
-        #   self.stat_dict[label] += 1
-        # if self.stat_dict[label] <= 100:
         if label not in self.class_dict.keys():
           self.class_dict[label] = class_index
           self.image_dict[index] = (pil_loader(path.strip()),class_index)

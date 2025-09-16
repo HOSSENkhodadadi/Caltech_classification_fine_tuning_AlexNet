@@ -6,22 +6,21 @@ This project implements a deep learning model for image classification on the Ca
 Caltech_classification_fine_tuning_AlexNet/
 ├── src/                          
 │   ├── inference.py              
-│   ├── preprocess.py             
+│   ├── preprocess.py
+│   ├── train.py              
 │   ├── utils.py                  
 │   └── config.py                 
 ├── models/                       
 │   └── model_v1.pkl              
 ├── data/                         
 │   └── schemas/                  
-├── and tests/                        
+├── tests/                        
 │   └── test_inference.py         
 ├── api/                          
 │   └── app.py                    
 ├── deployment/                   
-│   ├── Dockerfile                
-│   ├── docker-compose.yml        
-│   ├── k8s/                      
-│   └── helm/                     
+│   ├── Dockerfile                                             
+│   └── docker-compose.yml                     
 ├── monitoring/                   
 │   ├── metrics.py                
 │   └── alerts.py                 
